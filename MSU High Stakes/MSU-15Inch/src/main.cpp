@@ -46,3 +46,4 @@ void opcontrol() {
 		pros::delay(10);          // Run for 10 ms then update
 	}
 }
+//stinky smelly
