@@ -1,0 +1,2 @@
+void setClamp();
+void setIntakes();
