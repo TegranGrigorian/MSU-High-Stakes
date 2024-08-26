@@ -21,7 +21,12 @@ Motor intake(10, pros::MotorGearset::green);
 Imu imu(16);
 Distance distance(15);
 Optical color(2);
-Gps Gps(5);
+// Gps Gps(5);
+
+namespace pros::adi{
+    DigitalOut leftLift(1,LOW);
+    DigitalOut rightLift(2,LOW);  
+}
 
 Rotation latRot(7);
 Rotation angRot(8);
