@@ -15,7 +15,7 @@ Controller controller(E_CONTROLLER_MASTER);
 MotorGroup driveLeft({-13, -12, -11}, pros::MotorGearset::blue); // left motors on ports 13, 12, 11
 MotorGroup driveRight({20, 19, 18}, pros::MotorGearset::blue); // right motors on ports 20, 19, 18
 
-Motor hooks(1, pros::MotorGearset::green);
+MotorGroup hooks({1,2}, pros::MotorGearset::blue);
 Motor intake(10, pros::MotorGearset::green);
 
 Imu imu(16);

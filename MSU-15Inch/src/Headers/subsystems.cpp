@@ -18,3 +18,13 @@ void setIntakes(){
 	}
 }
 
+void setHooks(){ 
+	if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_UP)) {
+		hooks.move_velocity(600);
+	} else if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_DOWN)) { // i would do !input but I dont know if that works here
+		hooks.move_velocity(-600);
+	} else{
+		hooks.move_velocity(0);
+	}
+}
+

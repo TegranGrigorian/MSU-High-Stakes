@@ -42,6 +42,7 @@ void opcontrol() {
 
 		setIntakes();
 		setClamp();
+		setHooks();
 
 		pros::delay(10);          // Run for 10 ms then update
 	}

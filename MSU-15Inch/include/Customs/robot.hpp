@@ -16,7 +16,7 @@ extern MotorGroup driveLeft;
 extern MotorGroup driveRight;
 
 extern Motor intake;
-extern Motor hooks;
+extern MotorGroup hooks;
 
 extern Imu imu;
 extern Distance distance;
