@@ -16,11 +16,12 @@ MotorGroup driveLeft({-13, -12, -11}, pros::MotorGearset::blue); // left motors 
 MotorGroup driveRight({20, 19, 18}, pros::MotorGearset::blue); // right motors on ports 20, 19, 18
 
 MotorGroup hooks({1,2}, pros::MotorGearset::blue);
+MotorGroup backPack({3,4}, pros::MotorGearset::blue);
 Motor intake(10, pros::MotorGearset::green);
 
 Imu imu(16);
 Distance distance(15);
-Optical color(2);
+Optical color(5);
 // Gps Gps(5);
 
 Rotation latRot(7);

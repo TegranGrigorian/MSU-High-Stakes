@@ -16,6 +16,7 @@ extern MotorGroup driveLeft;
 extern MotorGroup driveRight;
 
 extern Motor intake;
+extern MotorGroup backPack;
 extern MotorGroup hooks;
 
 extern Imu imu;
