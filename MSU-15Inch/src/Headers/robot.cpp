@@ -22,14 +22,19 @@ Motor intake(10, pros::MotorGearset::green);
 Imu imu(16);
 Distance distance(15);
 Optical color(5);
+
 // Gps Gps(5);
 
 Rotation latRot(7);
 Rotation angRot(8);
 
+
+bool toggleLift = false; //boolean associated with the lfits
+bool toggleClamp = false;
 adi::DigitalOut Hang(6, LOW); //delete later
 adi::DigitalOut PTO(1, LOW);
-
+adi::DigitalOut leftLift(2, LOW);
+adi::DigitalOut rightLift(3, LOW);
 // drivetrain settings
 Drivetrain drivetrain(&driveLeft, // left motor group
                               &driveRight, // right motor group

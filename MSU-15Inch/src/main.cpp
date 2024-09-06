@@ -6,7 +6,6 @@ rd::Selector selector({
    {"Half WP", &halfWP},
    {"Skills", &skills},
 });
-
 rd::Console console;
 
 void initialize() {
@@ -26,7 +25,6 @@ void autonomous() {
 	console.println("Running auton...");
 	selector.run_auton();
 }
-
 void opcontrol() {
 	console.clear();
 	console.println("Driving...");
@@ -41,11 +39,13 @@ void opcontrol() {
         chassis.arcade(leftY, rightX, false, 0.75);
 
 		//setting the user controls from subsystems
-		setIntakes();
-		setClamp();
-		setHooks();
-		setBackPack();
-
+		
+		//classes 🥵🥵🥵🥵🥵🥵🥵🥵🥵
+		Pnu.setLift();
+		Pnu.setClamp();
+		Hooks.setHooks();
+		BackPack.setBackPack();
+		Intake.setIntakes();
 		pros::delay(10);          // Run for 10 ms then update
 	}
 }
