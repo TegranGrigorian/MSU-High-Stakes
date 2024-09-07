@@ -3,26 +3,28 @@
 
 class intakeClass {
     public:
-    static void setIntakes();
+    static void driveIntakes();
 };
 
 intakeClass Intake; // call the objects so we dont have to do it in our files!
 class hookClass {
     public:
-    static void setHooks();
+    static void driveHooks();
 };
 hookClass Hooks; 
 
 class pneumaticsClass{
 	public:
-    static void setLift();
-	static void setClamp();
+    static bool toggleClamp;  // Declaration
+    static bool toggleLift;   // Declaration
+    static void driveLift();
+	static void driveClamp();
 };
 pneumaticsClass Pnu;
 
 class backPackClass{
 	public:
-	static void setBackPack();
+	static void driveBackPack();
     
 };
 backPackClass BackPack;

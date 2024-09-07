@@ -39,13 +39,12 @@ void opcontrol() {
         chassis.arcade(leftY, rightX, false, 0.75);
 
 		//setting the user controls from subsystems
-		
 		//classes 🥵🥵🥵🥵🥵🥵🥵🥵🥵
-		Pnu.setLift();
-		Pnu.setClamp();
-		Hooks.setHooks();
-		BackPack.setBackPack();
-		Intake.setIntakes();
+		Pnu.driveLift();
+		Pnu.driveClamp();
+		Hooks.driveHooks();
+		BackPack.driveBackPack();
+		Intake.driveIntakes();
 		pros::delay(10);          // Run for 10 ms then update
 	}
 }

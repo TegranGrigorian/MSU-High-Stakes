@@ -4,8 +4,7 @@
 using namespace pros;
 class autoDetectionClass {
     public:
-    
-    char teamColor[5] = "none";
+    static char teamColor[4];
 
     static char detectRingColor() {// returns bool side, 0 is red and blue is 1
         char colordet = 'a'; // we want this code to detect multiple colors so we set the value detected to the first letter of the color, ie red = r.
@@ -33,6 +32,8 @@ class autoDetectionClass {
             strcpy(teamColor, "dne"); // Default case or handling for 'y' and other cases
         }   
         printf("%s" , teamColor);
+        
     }
+
 
 };

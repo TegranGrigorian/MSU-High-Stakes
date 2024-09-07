@@ -23,11 +23,9 @@ extern Imu imu;
 extern Distance distance;
 extern Optical color;
 
-//booleans assoicated with the pneumatics
+//pneumatics externed
 extern bool toggleClamp = false;
 extern bool toggleLift = false;
-
-//pneumatics externed
 extern adi::DigitalOut Clamp;
 extern adi::DigitalOut leftLift;
 extern adi::DigitalOut rightLift;
