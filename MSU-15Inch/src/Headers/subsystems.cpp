@@ -36,7 +36,7 @@ void hookClass::driveHooks() {
     if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_UP)) {
         hooks.move_velocity(600);
     } else if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_DOWN)) {
-        hooks.move_velocity(-600);
+        hooks.move_velocity(-600);  
     } else {
         hooks.move_velocity(0);
     }
@@ -45,13 +45,13 @@ void hookClass::driveHooks() {
 void hookClass::teamScoring() {
     hooks.move_velocity(600);
     while (color.get_proximity() < 100) {
-        // if ((char)autoDetection.detectRingColor != autoDetection.teamColor[1]) {
-        //     hooks.brake();
-        //     hooks.move_relative(200, 600);
-        //     hooks.move(600);
-        // } else {
-        //     hooks.move_velocity(600);
-        // }
+        if (autoDetection.detectRingColor() != autoDetection.teamColor[0]) {
+            hooks.brake();
+            hooks.move_relative(200, 600);
+            hooks.move(600);
+        } else {
+            hooks.move_velocity(600);
+        }
     }
 }
 

@@ -3,3 +3,4 @@
 #include "autons.hpp"
 #include "subsystems.hpp"
 #include "images.hpp"
+#include "automatedDetection.hpp"

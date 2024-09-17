@@ -1,7 +1,7 @@
 #include "Customs\automatedDetection.hpp"  // Include the header file for the class
 #include "main.h"
 using namespace pros;
-
+autoDetectionClass autoDetection;
 char autoDetectionClass::teamColor[4];  // Define the static variable
 
 char autoDetectionClass::detectRingColor() {
@@ -21,16 +21,13 @@ char autoDetectionClass::detectRingColor() {
     return colordet;         // Return the detected color
 }
 
-void autoDetectionClass::teamColorDetection(char* teamColor) {
+const char* autoDetectionClass::teamColorDetection() {
     char detectedColor = detectRingColor();
-
     if (detectedColor == 'r') {
-        strcpy(teamColor, "red");
+        return "red";
     } else if (detectedColor == 'b') {
-        strcpy(teamColor, "blue");
+        return "blue";
     } else {
-        strcpy(teamColor, "dne");  // Default case or handling for yellow/others
+        return "dne";  // Default case or handling for yellow/others
     }
-
-    printf("%s", teamColor);  // Print the team color
 }
