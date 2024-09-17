@@ -24,8 +24,7 @@ extern Distance distance;
 extern Optical color;
 
 //pneumatics externed
-extern bool toggleClamp = false;
-extern bool toggleLift = false;
+
 extern adi::DigitalOut Clamp;
 extern adi::DigitalOut leftLift;
 extern adi::DigitalOut rightLift;

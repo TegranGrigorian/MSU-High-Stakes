@@ -41,11 +41,13 @@ void opcontrol() {
 		//setting the user controls from subsystems
 		//classes 🥵🥵🥵🥵🥵🥵🥵🥵🥵
 		// Function heirarchy expalained so ex.) Pnu.drivelift(); -> Pnu = parent, driveLift = Child. so parent  is Pnu and the child is driveClamp()
+	
 		Pnu.driveLift(); //the drive keyword at the start of the child function means that the function will be assoicated with driver control, i.e it uses the controller most likley.
 		Pnu.driveClamp();
 		Hooks.driveHooks();
 		BackPack.driveBackPack();
 		Intake.driveIntakes();
+		
 		pros::delay(10);          // Run for 10 ms then update
 	}
 }

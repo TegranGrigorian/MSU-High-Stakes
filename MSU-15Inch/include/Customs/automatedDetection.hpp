@@ -1,11 +1,13 @@
-#ifndef AUTOMATEDDETECTION_H
-#define AUTOMATEDDETECTION_H
+#ifndef AUTOMATEDDETECTION_HPP
+#define AUTOMATEDDETECTION_HPP
 
 class autoDetectionClass {
     public:
-    char teamColor[5];
-    static char detectRingColor();
-    static void teamColorDetection(char* teamColor);
+    static char teamColor[4]; // Static variable to store team color
+    static char detectRingColor(); // Function to detect ring color
+    static void teamColorDetection(char* teamColor); // Function to set team color
 };
-autoDetectionClass autoDetection;
+
+extern autoDetectionClass autoDetection; // Declare an instance of the class
+
 #endif // AUTOMATEDDETECTION_H

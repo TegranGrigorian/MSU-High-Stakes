@@ -1,5 +1,7 @@
 #include "main.h"
-#include "automatedDetection.hpp"
+#include "Customs/automatedDetection.hpp"
+#include "Customs/subsystems.hpp"
+
 void soloWP(){
     chassis.moveToPoint(10, 10, 1000);
     

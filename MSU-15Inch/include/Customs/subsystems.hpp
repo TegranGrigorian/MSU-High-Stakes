@@ -1,31 +1,36 @@
-#ifndef SUBSYSTEMS_H
-#define SUBSYSTEMS_H
-
+#ifndef SUBSYSTEMS_HPP
+#define SUBSYSTEMS_HPP
+#pragma once
 class intakeClass {
     public:
     static void driveIntakes();
 };
 
-intakeClass Intake; // call the objects so we dont have to do it in our files!
+
+extern intakeClass Intake; // call the objects so we dont have to do it in our files!
 class hookClass {
     public:
     static void driveHooks();
+    static void teamScoring();
 };
-hookClass Hooks; 
+extern hookClass Hooks; //extern the class assingments so it can be referenced in multiple files without redefinition/ redefinition errors 
 
 class pneumaticsClass{
 	public:
-    static bool toggleClamp;  // Declaration
-    static bool toggleLift;   // Declaration
+    static bool toggleClamp;
+    static bool toggleLift;
     static void driveLift();
 	static void driveClamp();
+    static void setLift(bool setLift);
+    static void autonLift();
 };
-pneumaticsClass Pnu;
+extern pneumaticsClass Pnu;
 
 class backPackClass{
 	public:
 	static void driveBackPack();
     
 };
-backPackClass BackPack;
-#endif // SUBSYSTEMS_H
+extern backPackClass BackPack;
+
+#endif // SUBSYSTEMS_HPP
