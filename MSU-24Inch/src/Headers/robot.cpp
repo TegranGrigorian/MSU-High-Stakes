@@ -15,24 +15,22 @@ Controller controller(E_CONTROLLER_MASTER);
 MotorGroup driveLeft({-13, -12, -11}, pros::MotorGearset::blue); // left motors on ports 13, 12, 11
 MotorGroup driveRight({20, 19, 18}, pros::MotorGearset::blue); // right motors on ports 20, 19, 18
 
-Motor hooks(1, pros::MotorGearset::green);
+MotorGroup hooks({1,2}, pros::MotorGearset::blue);
+MotorGroup backPack({3,4}, pros::MotorGearset::blue);
 Motor intake(10, pros::MotorGearset::green);
 
 Imu imu(16);
 Distance distance(15);
-Optical color(2);
-// Gps Gps(5);
+Optical color(5);
 
-namespace pros::adi{
-    DigitalOut leftLift(1,LOW);
-    DigitalOut rightLift(2,LOW);  
-}
+// Gps Gps(5);
 
 Rotation latRot(7);
 Rotation angRot(8);
 
-adi::DigitalOut Hang(6, LOW); //delete later
-adi::DigitalOut PTO(1, LOW);
+adi::DigitalOut leftLift(2, LOW);
+adi::DigitalOut rightLift(3, LOW);
+adi::DigitalOut Clamp(1,LOW);
 
 // drivetrain settings
 Drivetrain drivetrain(&driveLeft, // left motor group

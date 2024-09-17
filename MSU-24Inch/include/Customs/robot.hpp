@@ -16,14 +16,19 @@ extern MotorGroup driveLeft;
 extern MotorGroup driveRight;
 
 extern Motor intake;
-extern Motor hooks;
+extern MotorGroup backPack;
+extern MotorGroup hooks;
 
 extern Imu imu;
 extern Distance distance;
 extern Optical color;
 
+//pneumatics externed
+
+extern adi::DigitalOut Clamp;
 extern adi::DigitalOut leftLift;
 extern adi::DigitalOut rightLift;
+
 extern Rotation latRot;
 extern Rotation angRot;
 
